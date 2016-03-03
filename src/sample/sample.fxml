@@ -1,8 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.GridPane?>
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="300.0" prefWidth="500.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="userNameBar" layoutX="169.0" layoutY="113.0" minHeight="-Infinity" minWidth="-Infinity" promptText="Username" />
+            <PasswordField fx:id="passwordBar" layoutX="169.0" layoutY="150.0" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressed1" promptText="Password" />
+            <Button layoutX="169.0" layoutY="190.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginButton" prefHeight="26.0" prefWidth="163.0" text="Login" />
+            <Button layoutX="169.0" layoutY="224.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createButton" prefHeight="26.0" prefWidth="163.0" text="Create Account">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Button>
+            <Button fx:id="exitProgramButton" layoutX="169.0" layoutY="260.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exitButton" prefHeight="26.0" prefWidth="163.0" text="Exit" />
+            <Label alignment="CENTER" layoutX="100.0" layoutY="6.0" prefHeight="93.0" prefWidth="292.0" text="My Journal">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
 </GridPane>
